@@ -26,12 +26,17 @@ nnoremap <silent> <Plug>ZipClosed :<C-U>call CloseFold()<cr>
 nnoremap <silent> <Plug>ZipOpenNext :<C-U>call NextClosedFold('j')<cr>zo
 nnoremap <silent> <Plug>ZipOpenPrev :<C-U>call NextClosedFold('k')<cr>zo
 
+vnoremap <silent> <Plug>ZipOpenVisual :'<,'>normal zo<cr>
+vnoremap <silent> <Plug>ZipClosedVisual :'<,'>normal zc<cr>
+
 if !hasmapto('<Plug>ZipClosed') || maparg('<bar>', 'n') ==# ''
   nmap <bar> <Plug>ZipClosed
+  vmap <bar> <Plug>ZipClosedVisual
 endif
 
 if !hasmapto('<Plug>ZipOpenNext') || maparg('<Bslash>', 'n') ==# ''
   nmap <Bslash> <Plug>ZipOpenNext
   nmap <C-Bslash> <Plug>ZipOpenPrev
+  vmap <Bslash> <Plug>ZipOpenVisual
 endif
 
