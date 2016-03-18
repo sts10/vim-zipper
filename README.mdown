@@ -4,6 +4,18 @@ Quickly fold and unfold code by indent. This is my first Vim plugin, which means
 
 ![vim-zipper-gif](vim-zipper-gif.gif)
 
+## Installation
+
+Should work with [Pathogen](https://github.com/tpope/vim-pathogen), [vim-plug](https://github.com/junegunn/vim-plug), [Vundle](https://github.com/VundleVim/Vundle.vim), etc. like other plugins.
+
+I use [vim-plug](https://github.com/junegunn/vim-plug), so installation of vim-zipper looks like this in my [vimrc](https://github.com/sts10/terminal_and_vim_settings/blob/master/vimrc):
+
+```
+Plug 'sts10/vim-zipper'
+```
+
+Then don't forget to run `:PlugInstall`
+
 ## Default Mappings 
 
 If you don't have `|` (`<bar>`) or `\` (`<Bslash`) mapped already, here is what vim-zipper will map for you: 
