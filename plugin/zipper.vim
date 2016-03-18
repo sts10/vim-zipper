@@ -21,24 +21,17 @@ endfunction
 function! CloseFold()
   normal zc
 endfunction
-" nnoremap <BS> zc
-" nnoremap <bar> zc
-" nnoremap <silent> <Bslash> :call NextClosedFold('j')<cr>zo
-" nnoremap <silent> <C-Bslash> :call NextClosedFold('k')<cr>zo
 
 nnoremap <silent> <Plug>ZipClosed :<C-U>call CloseFold()<cr>
 nnoremap <silent> <Plug>ZipOpenNext :<C-U>call NextClosedFold('j')<cr>zo
 nnoremap <silent> <Plug>ZipOpenPrev :<C-U>call NextClosedFold('k')<cr>zo
 
-if !hasmapto('<Plug>ZipOpenNext') || maparg('<Bslash>', 'n') ==# ''
+if !hasmapto('<Plug>ZipClosed') || maparg('<bar>', 'n') ==# ''
   nmap <bar> <Plug>ZipClosed
+endif
+
+if !hasmapto('<Plug>ZipOpenNext') || maparg('<Bslash>', 'n') ==# ''
   nmap <Bslash> <Plug>ZipOpenNext
   nmap <C-Bslash> <Plug>ZipOpenPrev
 endif
 
-" nnoremap <bar> zo
-" nmap <bar> viizo
-"
-" nnoremap <Leader>r viizO<Esc>`<zfiik
-" nmap <BS> zfiik
-" nmap <Bslash> viizo
