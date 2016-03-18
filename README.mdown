@@ -16,6 +16,14 @@ Plug 'sts10/vim-zipper'
 
 Then don't forget to run `:PlugInstall`
 
+Note that this plugin really only works well with `foldmethod=indent`. Thus it's probably best if you just go ahead and `set foldmethod=indent` in your vimrc (though the plugin does this for you). 
+
+## What This Plugin Does
+
+First off the plugin enables folds and then sets `foldmethod` to `indent`. More on that below.
+
+Then it gives you two basic commands to map: ZipOpen and ZipClosed. ZipClosed is basically just `zc`-- nothing special as of this version. But ZipOpen is a bit smarter-- it finds the next or previous closed fold and opens that fold. In tandem these commands allow you to quickly close and open folds. 
+
 ## Default Mappings 
 
 If you don't have `|` (`<bar>`) or `\` (`<Bslash`) mapped already, here is what vim-zipper will map for you: 
@@ -29,15 +37,18 @@ If you don't have `|` (`<bar>`) or `\` (`<Bslash`) mapped already, here is what 
   vmap <Bslash> <Plug>ZipOpenVisual
 ```
 
-If you have `|` or `\` already mapped (for example, if you haven't mapped your `<Leader>` to something other than `\`), you'll have to map Zipper's commands yourself. 
+If you have `|` or `\` already mapped (for example, if you haven't mapped your `<Leader>` to something other than `\`), vim-zipper will not override those mapping. Instead you'll have to map vim-zipper's commands yourself or map your `<Leader>` to something other than `\` and restart Vim. 
 
-I chose `\` as "zip open" and `|` as "zip close" because they look like a zipper opening and closing.
+Personally I map Leader to Space with the following line in [my vimrc](https://github.com/sts10/terminal_and_vim_settings/blob/master/vimrc): `let mapleader = "\<Space>"`. 
+
+I chose `\` as ZipOpen and `|` as ZipClose because they look like a zipper opening and closing.
 
 ## Things to Know
 
-This current version of zipper runs `set foldenable` and `set foldmethod=indent`. It looks like you can override this in your `vimrc` with an autocmd per filetype, such as: 
+This current version of zipper runs `set foldenable` and `set foldmethod=indent`. It looks like you can override this, at least on a filetype basis, in your `vimrc` with an autocmd, such as: 
 
 ```
+autocmd FileType python setlocal foldmethod=syntax
 autocmd FileType vim setlocal foldmethod=marker
 ```
 
