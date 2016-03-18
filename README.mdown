@@ -2,6 +2,8 @@
 
 Quickly fold and unfold code by indent. This is my first Vim plugin, which means (a) it might be a bit rough around the edges/corner cases, and (b) there's plenty to improve via pull request!
 
+![vim-zipper-gif](vim-zipper-gif.gif)
+
 ## Default Mappings 
 
 If you don't have `|` (`<bar>`) or `\` (`<Bslash`) mapped already, here is what vim-zipper will map for you: 
