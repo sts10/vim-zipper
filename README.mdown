@@ -31,6 +31,6 @@ autocmd FileType vim setlocal foldmethod=marker
 
 ## Special Thanks / Inspiration
 
-A good amount of this plugin was adapted from [this Stack Overflow answer](http://stackoverflow.com/a/9407015/3160994) from user [ib.](http://stackoverflow.com/users/254635/ib). 
+A good amount of this plugin was adapted from [this Stack Overflow answer](http://stackoverflow.com/a/9407015/3160994) from user [ib.](http://stackoverflow.com/users/254635/ib). Also thanks [Tim Pope](https://github.com/tpope)'s [Commentary plugin](https://github.com/tpope/vim-commentary), where I copped some plugin tricks.
 
 Pull requests encouraged! Also feel free to [hit me up on Twitter](https://twitter.com/sts10).
