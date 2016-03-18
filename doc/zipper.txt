@@ -1,0 +1,18 @@
+*zipper.txt*  Quickly Fold and Unfold
+
+Author:  Sam Schlinkert <http://samschlinkert.com/>
+
+Quickly fold and unfold multiple lines of code. Should work
+in Visual mode as well as Normal mode. 
+
+                                                *bar*
+|                     Create/close fold. Similar to zc.
+
+                                                *Bslash*
+\                     Go to next closed fold and open it
+
+                                                *C-Bslash*
+<C-\>                 Go to previous closed fold and open it
+
+
+vim:tw=78:et:ft=help:norl:
