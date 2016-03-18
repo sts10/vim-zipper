@@ -18,10 +18,24 @@ function! NextClosedFold(dir)
   endif
 endfunction
 
+function! CloseFold()
+  normal zc
+endfunction
 " nnoremap <BS> zc
-nnoremap <bar> zc
-nnoremap <silent> <Bslash> :call NextClosedFold('j')<cr>zo
-nnoremap <silent> <C-Bslash> :call NextClosedFold('k')<cr>zo
+" nnoremap <bar> zc
+" nnoremap <silent> <Bslash> :call NextClosedFold('j')<cr>zo
+" nnoremap <silent> <C-Bslash> :call NextClosedFold('k')<cr>zo
+
+nnoremap <silent> <Plug>ZipClosed :<C-U>call CloseFold()<cr>
+nnoremap <silent> <Plug>ZipOpenNext :<C-U>call NextClosedFold('j')<cr>zo
+nnoremap <silent> <Plug>ZipOpenPrev :<C-U>call NextClosedFold('k')<cr>zo
+
+if !hasmapto('<Plug>ZipOpenNext') || maparg('<Bslash>', 'n') ==# ''
+  nmap <bar> <Plug>ZipClosed
+  nmap <Bslash> <Plug>ZipOpenNext
+  nmap <C-Bslash> <Plug>ZipOpenPrev
+endif
+
 " nnoremap <bar> zo
 " nmap <bar> viizo
 "
