@@ -1,4 +1,27 @@
 # vim-zipper
 
+Quickly fold and unfold code by indent. 
+
+## Default Mappings 
+
+If you don't have `|` (`<bar>`) or `\` (`<Bslash`) mapped already, here is what vim-zipper will map for you: 
+
+```
+  nmap <bar> <Plug>ZipClosed
+  vmap <bar> <Plug>ZipClosedVisual
+
+  nmap <Bslash> <Plug>ZipOpenNext
+  nmap <C-Bslash> <Plug>ZipOpenPrev
+  vmap <Bslash> <Plug>ZipOpenVisual
+```
+
+If you have `|` or `\` already mapped (for example, if you haven't mapped your `<Leader>` to something other than `\`), you'll have to map Zipper's commands yourself. 
+
+## Things to Know
+
+This current version of zipper runs `set foldenable` and `set foldmethod=indent`. It looks like you can override this in your `vimrc` with an autocmd per filetype, such as: 
 
 
+```
+autocmd FileType vim setlocal foldmethod=marker
+```

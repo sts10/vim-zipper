@@ -1,8 +1,9 @@
 
+set foldenable
+set foldmethod=indent
+
 function! NextClosedFold(dir)
-  if (foldclosed(line('.')) > 0)
-    " normal zo
-  else
+  if !(foldclosed(line('.')) > 0)
     let cmd = 'norm!z' . a:dir
     let view = winsaveview()
     let [l0, l, openf] = [0, view.lnum, 1]
@@ -14,7 +15,6 @@ function! NextClosedFold(dir)
     if openf
         call winrestview(view)
     endif
-    " normal zo
   endif
 endfunction
 
