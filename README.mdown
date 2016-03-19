@@ -16,13 +16,13 @@ Plug 'sts10/vim-zipper'
 
 Then don't forget to run `:PlugInstall`
 
-Note that this plugin really only works well with `foldmethod=indent`. Thus it's probably best if you just go ahead and `set foldmethod=indent` in your vimrc (though the plugin does this for you). 
+Note that, for me at least, this plugin really only works well with `foldmethod=indent`. Thus it's probably best if you just go ahead and `set foldmethod=indent` in your vimrc (though the plugin does this for you). 
 
 ## What This Plugin Does
 
-First off the plugin enables folds and then sets `foldmethod` to `indent`. More on that below.
+First off the plugin runs `set foldenable` and then sets `foldmethod` to `indent`. More on that below.
 
-Then it gives you two basic commands to map: ZipOpen and ZipClosed. ZipClosed is basically just `zc`-- nothing special as of this version. But ZipOpen is a bit smarter-- it finds the next or previous closed fold and opens that fold. In tandem these commands allow you to quickly close and open folds. 
+Then it gives you two basic commands to map: ZipOpen and ZipClosed. ZipClosed is basically just `zc`-- nothing special as of this version. But ZipOpen is a bit smarter-- it finds the next or previous closed fold and opens that fold. In tandem these commands allow you to quickly close and open folds without moving your cursor. 
 
 ## Default Mappings 
 
