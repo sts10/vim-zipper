@@ -1,6 +1,8 @@
 
-set foldenable
-set foldmethod=indent
+if &foldmethod ==# 'manual'
+  set foldenable
+  set foldmethod=indent
+endif
 
 function! NextClosedFold(dir)
   if !(foldclosed(line('.')) > 0)

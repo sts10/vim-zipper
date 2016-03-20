@@ -20,7 +20,7 @@ Note that, for me at least, this plugin really only works well with `foldmethod=
 
 ## What This Plugin Does
 
-First off the plugin runs `set foldenable` and then sets `foldmethod` to `indent`. More on that below.
+If you don't have a `foldmethod` set, or it is set to `manual`, zipper runs `set foldenable` and sets `foldmethod` to `indent`. More on that below.
 
 Then it gives you two basic commands to map: ZipOpen and ZipClosed. ZipClosed is basically just `zc`-- nothing special as of this version. But ZipOpen is a bit smarter-- it finds the next or previous closed fold and opens that fold. In tandem these commands allow you to quickly close and open folds without moving your cursor. 
 
@@ -45,7 +45,9 @@ I chose `\` as ZipOpen and `|` as ZipClose because they look like a zipper openi
 
 ## Things to Know
 
-This current version of zipper runs `set foldenable` and `set foldmethod=indent`. It looks like you can override this, at least on a filetype basis, in your `vimrc` with an autocmd, such as: 
+As mentioned above, this current version of zipper checks if your `foldmethod` is set to `manual` and if it is, it runs `set foldenable` and `set foldmethod=indent`. Setting `foldmethod` to anything other than `manual` or `''` in your vimrc should override this. 
+
+It also looks like you can override this on a filetype basis in your `vimrc` with an autocmd, such as: 
 
 ```
 autocmd FileType python setlocal foldmethod=syntax
