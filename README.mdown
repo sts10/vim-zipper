@@ -24,6 +24,10 @@ If you don't have a `foldmethod` set, or it is set to `manual`, zipper runs `set
 
 Then it gives you two basic commands to map: ZipOpen and ZipClosed. ZipClosed is basically just `zc`-- nothing special as of this version. But ZipOpen is a bit smarter-- it finds the next or previous closed fold and opens that fold. In tandem these commands allow you to quickly close and open folds without moving your cursor. 
 
+### Do You Need This Plugin?
+
+Vim comes with folding built in by default-- 6 methods of it as of 7.4-- with a variety of commands to manipulate them. The ideal fold setup for you may already be built in to Vim. And if that's the case you wouldn't need vim-zipper. Check out `:help folding` and `:help fold-commands` to learn more.
+
 ## Default Mappings 
 
 If you don't have `|` (`<bar>`) or `\` (`<Bslash`) mapped already, here is what vim-zipper will map for you: 
