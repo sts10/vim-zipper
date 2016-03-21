@@ -4,6 +4,8 @@ Quickly fold and unfold code by indent. This is my first Vim plugin, which means
 
 ![vim-zipper-gif](vim-zipper-gif.gif)
 
+Here's a [blog post](http://sts10.github.io/blog/2016/03/20/vim-zipper-my-first-vim-plugin/) on the creation of this plugin, if you're into that sort of thing!
+
 ## Installation
 
 Should work with [Pathogen](https://github.com/tpope/vim-pathogen), [vim-plug](https://github.com/junegunn/vim-plug), [Vundle](https://github.com/VundleVim/Vundle.vim), etc. like other plugins.
@@ -28,7 +30,7 @@ Then it gives you two basic commands to map: ZipOpen and ZipClosed. ZipClosed is
 
 Vim comes with folding built in by default-- 6 methods of it as of 7.4-- with a variety of commands to manipulate them. The ideal fold setup for you may already be built in to Vim. And if that's the case you wouldn't need vim-zipper. Check out `:help folding` and `:help fold-commands` to learn more.
 
-## Default Mappings 
+## Vim-Zipper's Default Mappings 
 
 If you don't have `|` (`<bar>`) or `\` (`<Bslash`) mapped already, here is what vim-zipper will map for you: 
 
