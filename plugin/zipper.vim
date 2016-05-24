@@ -1,6 +1,6 @@
 
 if &foldmethod ==# 'manual'
-  " set foldenable
+  set foldenable
   set foldmethod=indent
 endif
 
