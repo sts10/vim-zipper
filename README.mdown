@@ -28,7 +28,7 @@ Then it gives you two basic commands to map: ZipOpen and ZipClosed. ZipClosed is
 
 ### Do You Need This Plugin?
 
-Vim comes with folding built in by default-- 6 methods of it as of 7.4-- with a variety of commands to manipulate them. The ideal fold setup for you may already be built in to Vim. And if that's the case you wouldn't need vim-zipper. Check out `:help folding` and `:help fold-commands` to learn more.
+Vim comes with folding built in by default-- 6 methods of it as of 7.4-- with a variety of commands to manipulate them. The ideal fold setup for you may already be built in to Vim. And if that's the case you wouldn't need vim-zipper. Check out `:help folding` and `:help fold-commands` to learn more-- `zj` and `zk` seem particularly useful, though they don't perform the same function as this plugin. But given `zj`, `zk`, the other fold-commands, and [this Reddit comment](https://www.reddit.com/r/vim/comments/4jm160/help_fix_this_fold_mapping/d383k1s) as clues, you might be able to build your own remapping that works better for you than what this plugin supplies.
 
 ## Vim-Zipper's Default Mappings 
 
