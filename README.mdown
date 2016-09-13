@@ -1,10 +1,10 @@
 # vim-zipper
 
-Quickly fold and unfold code by indent. This is my first Vim plugin, which means (a) it might be a bit rough around the edges/corner cases, and (b) there's plenty to improve via pull request!
+Quickly fold and unfold code by indent. 
 
 ![vim-zipper-gif](vim-zipper-gif.gif)
 
-Here's a [blog post](http://sts10.github.io/blog/2016/03/20/vim-zipper-my-first-vim-plugin/) on the creation of this plugin, if you're into that sort of thing!
+Here's a [blog post](http://sts10.github.io/blog/2016/03/20/vim-zipper-my-first-vim-plugin/) on the creation of this plugin, if you're into that sort of thing! This is my first Vim plugin, which means (a) it might be a bit rough around the edges/corner cases, and (b) there's plenty to improve via pull request!
 
 ## Installation
 
@@ -18,7 +18,7 @@ Plug 'sts10/vim-zipper'
 
 Then don't forget to run `:PlugInstall`
 
-Note that, for me at least, this plugin really only works well with `foldmethod=indent`. Thus it's probably best if you just go ahead and `set foldmethod=indent` in your vimrc (though the plugin does this for you). 
+Note that, for me at least, this plugin works best with `foldmethod=indent`. Thus it's probably best if you just go ahead and `set foldmethod=indent` in your vimrc (though the plugin does this for you). 
 
 ## What This Plugin Does
 
@@ -28,7 +28,7 @@ Then it gives you two basic commands to map: ZipOpen and ZipClosed. ZipClosed is
 
 ### Do You Need This Plugin?
 
-Vim comes with folding built in by default-- 6 methods of it as of 7.4-- with a variety of commands to manipulate them. The ideal fold setup for you may already be built in to Vim. And if that's the case you wouldn't need vim-zipper. Check out `:help folding` and `:help fold-commands` to learn more-- `zj` and `zk` seem particularly useful, though they don't perform the same function as this plugin. But given `zj`, `zk`, the other fold-commands, and [this Reddit comment](https://www.reddit.com/r/vim/comments/4jm160/help_fix_this_fold_mapping/d383k1s) as clues, you might be able to build your own remapping that works better for you than what this plugin supplies.
+Vim comes with folding built in by default-- 6 methods of it as of 7.4-- with a variety of commands to manipulate them. The ideal fold setup for you may already be built in to Vim, and if that's the case you wouldn't need vim-zipper. Check out `:help folding` and `:help fold-commands` to learn more. Though for example, `zj` and `zk` seem particularly useful, though they don't perform the exact same functions as this plugin. But given `zj`, `zk`, the other fold-commands, and [this Reddit comment](https://www.reddit.com/r/vim/comments/4jm160/help_fix_this_fold_mapping/d383k1s) as clues, you might be able to build your own remapping that works better for you than what this plugin supplies.
 
 ## Vim-Zipper's Default Mappings 
 
